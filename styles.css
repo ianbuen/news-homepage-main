@@ -293,11 +293,7 @@ p {
 
     .other-news img {
         height: 100%;
-    }
-
-    .article-details {
-        /* align-items: ; */
-    }
+    } 
     
     .article-details * {
         margin: 0;
