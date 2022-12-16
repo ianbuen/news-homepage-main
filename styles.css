@@ -193,7 +193,8 @@ p {
         ;
         grid-template-columns: 8fr 4fr;
         grid-area: center;
-        gap: 3vw;
+        column-gap: 2vmax;
+        row-gap: 60px;
     }
 
     .attribution {
