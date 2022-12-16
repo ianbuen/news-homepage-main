@@ -38,6 +38,7 @@ p {
 
 .btn-menu {
     z-index: 1;
+    right: 20px;
 }
 
 .btn-read-more {
@@ -54,6 +55,14 @@ p {
 .intro {
     margin-top: 1%;
     grid-area: intro;
+}
+
+.intro > h1 {
+    line-height: 1;
+}
+
+.intro p {
+    color: hsl(236, 13%, 42%);
 }
 
 .menu {
@@ -105,7 +114,7 @@ p {
 .new-headlines {
     background: hsl(240, 100%, 5%);
     color: white;
-    padding: 1% 5%;
+    padding: 5%;
     margin: 10% 0;
 }
 
@@ -145,7 +154,8 @@ p {
 
 .new-headlines>h2 {
     color: hsl(35, 77%, 62%);
-    margin-bottom: 0;
+    margin: 0;
+    font-size: 2.5rem;
 }
 
 .desktop-hero-img {
@@ -183,7 +193,7 @@ p {
         ;
         grid-template-columns: 8fr 4fr;
         grid-area: center;
-        gap: 40px;
+        gap: 3vw;
     }
 
     .attribution {
@@ -207,8 +217,9 @@ p {
             "image image"
             "title details"
         ;
-        column-gap: 90px;
+        column-gap: 5vw;
         row-gap: 40px;
+        grid-template-rows: auto 1fr;
     }
 
     .intro>h1 { 
@@ -223,6 +234,10 @@ p {
         padding: 0; 
     }
 
+    .intro p {
+        margin-top: 0;
+    }
+
     .menu {
         position: relative;
         background: hsl(36, 100%, 99%);
@@ -232,7 +247,8 @@ p {
         grid-template-columns: unset;
         grid-template-rows: unset;
         grid-template-areas: unset;
-        width: auto;
+        width: auto; 
+        color: hsl(236, 13%, 42%);
     }
 
     .menu>ul {
@@ -243,7 +259,7 @@ p {
 
     .menu li {
         display: inline;
-        padding: 10px;
+        padding: 20px;
     }
 
     .menu li:first-of-type {
@@ -267,13 +283,29 @@ p {
         display: grid;
         grid-area: other;
         grid-auto-flow: column;
-        gap: 50px;
+        /* gap: 40px; */
     } 
 
-    .other-news > article {
+    .other-news > article { 
         gap: 20px;
     }
-}
+
+    .other-news img {
+        height: 100%;
+    }
+
+    .article-details {
+        /* align-items: ; */
+    }
+    
+    .article-details * {
+        margin: 0;
+    }
+
+    .article-details h3 {
+        margin: 10px 0;
+    }
+} 
 
 @media only screen and (min-width: 1440px) {
     .intro>h1 { 
