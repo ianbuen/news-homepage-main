@@ -197,7 +197,7 @@ p {
         row-gap: 60px;
     }
 
-    .attribution {
+    footer {
         grid-area: down;
     }
 
