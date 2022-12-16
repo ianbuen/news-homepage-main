@@ -2,13 +2,30 @@ const btnMenu = document.querySelector('.btn-menu');
 const btnClose = document.querySelector('.menu > img');
 const {style: menu} = document.querySelector('.menu');
 
-btnMenu.addEventListener('click', () => { 
-    menu.width = '70%';
-    btnClose.style.display = 'block';
+window.onload = () => {
+
+    if (window.innerWidth < 1080)
+        menu.width = "0px";
+};
+
+window.onresize = () => {
+    menu.width = window.innerWidth < 1080 ? "0px" : "auto";
+    btnMenu.src = "./assets/images/icon-menu.svg";
+}
+
+btnMenu.addEventListener('click', (e) => { 
+
+    e.preventDefault();
+
+    toggleMenu();
 });
 
-btnClose.addEventListener('click', () => {
-    menu.width = "0";
-    btnClose.style.display = "none";
-})
-
+const toggleMenu = () => {
+    if (menu.width == "0px") {
+        menu.width = '275px';
+        btnMenu.src = "./assets/images/icon-menu-close.svg";
+    } else {
+        menu.width = "0px";
+        btnMenu.src = "./assets/images/icon-menu.svg";
+    }  
+}; 
